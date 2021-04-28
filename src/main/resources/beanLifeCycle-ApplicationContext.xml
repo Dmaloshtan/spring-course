@@ -14,24 +14,14 @@
    </bean>
 
 
-
    <bean id="myCoach"
-   class="org.home.springdemo.TrackCoach">
+   class="org.home.springdemo.TrackCoach"
+         scope="prototype"
+   init-method="doMyStartUpStuff"
+   destroy-method="doMyCleanUpStuff">
       <constructor-arg ref="myFortuneService"/>
+
    </bean>
-
-   <bean id="golfCoach" class="org.home.springdemo.GolfCoach">
-      <constructor-arg ref="myFortuneService"/>
-   </bean>
-
-   <bean id="myCricketCoach"
-         class="org.home.springdemo.CricketCoach">
-      <property name="fortuneService" ref="myFortuneService"/>
-      <property name="emailAddress" value="${foo.email}"/>
-      <property name="team" value="${foo.team}"/>
-   </bean>
-
-
 
 
 
