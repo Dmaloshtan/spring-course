@@ -7,5 +7,10 @@
 
 
 <a href="hello/showForm">Hello World form</a>  <!--Тэг для ссылки -->
+
+<br> <br>
+
+<a href="student/showForm">Student form</a>
+
 </body>
 </html>
