@@ -1,4 +1,4 @@
-package org.home.hibernate.demo;
+package org.home.hibernate.demo.app;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
