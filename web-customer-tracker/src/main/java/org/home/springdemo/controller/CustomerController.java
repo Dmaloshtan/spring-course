@@ -1,6 +1,5 @@
 package org.home.springdemo.controller;
 
-import org.home.springdemo.dao.CustomerDAO;
 import org.home.springdemo.entity.Customer;
 import org.home.springdemo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +49,13 @@ public class CustomerController {
         Customer customer = customerService.getCustomer(id);
         model.addAttribute("customer", customer);
         return "customer-form";
+    }
+
+    @GetMapping("/delete")
+    public String deleteCustomer(@RequestParam("customerId") int id){
+
+        customerService.deleteCustomer(id);
+        return "redirect:/customer/list";
     }
 
 }
