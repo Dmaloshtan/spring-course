@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
     <title>List Customers</title>
@@ -12,7 +13,7 @@
 
 <div id="wrapper">
     <div id="header">
-       <h2>CRM - Customer Relatiomship Manager</h2>
+       <h2><a href="/customer/list">CRM - Customer Relationship Manager</a> </h2>
     </div>
 </div>
 
@@ -22,6 +23,14 @@
         onclick="window.location.href='showFormForAdd'; return false;"
         class="add-button"
         />
+
+        <!--Search box -->
+        <form:form action="search" method="get">
+            Search customer: <input type="text" name="theSearchName" />
+            <input type="submit" value="Search" class="add-button" />
+        </form:form>
+
+
 
         <table>
             <tr>
