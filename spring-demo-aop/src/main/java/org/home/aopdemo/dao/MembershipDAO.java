@@ -9,4 +9,8 @@ public class MembershipDAO {
         System.out.println(getClass() + ": membership class");
     }
 
+    public void goToSleep(){
+        System.out.println(getClass() + ": i'm going to sleep now");
+    }
+
 }
