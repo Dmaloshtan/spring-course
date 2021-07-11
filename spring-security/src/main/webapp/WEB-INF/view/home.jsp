@@ -5,7 +5,7 @@
     <title>Home Page</title>
 </head>
 <body>
-<h2>Home Page</h2>
+<h2>Home Page - Hi Friend</h2>
 <hr>
 Welcome to my home page friend!
 </body>
